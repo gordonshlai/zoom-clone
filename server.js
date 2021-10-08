@@ -27,6 +27,11 @@ io.on("connection", (socket) => {
 
     // send a message to everyone in the room other than ourself that a user has joined the room
     socket.broadcast.to(roomId).emit("user-connected", userId);
+
+    // this runs whenever a user disconnect from our server
+    socket.on("disconnect", () => {
+      socket.broadcast.to(roomId).emit("user-disconnected", userId);
+    });
   });
 });
 

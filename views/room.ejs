@@ -9,7 +9,7 @@
     // create the ROOM_ID variable that contains the roomId passed from the backend
     const ROOM_ID = '<%= roomId %>'
   </script>
-  <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js" defer></script>
+  <script defer src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
 
   <!-- Loads all the socket.io code into the frontend and serving them from our server -->
   <script src='/socket.io/socket.io.js' defer></script>
@@ -17,7 +17,7 @@
   <!-- script.js will have access to socket.io code from here -->
   <script src='script.js' defer></script>
 
-  <title>Document</title>
+  <title>Gordonator</title>
   <style>
     #video-grid {
       display: grid;
@@ -34,6 +34,7 @@
 </head>
 
 <body>
+  <h1>Gordonator</h1>
   <div id="video-grid"></div>
 </body>
 
